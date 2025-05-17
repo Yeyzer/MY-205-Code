@@ -1,4 +1,4 @@
-
+//this controlls the bullets 
 class Bullet extends GameObject {
   Bullet(float x, float y) {
     pos = new PVector(x, y);

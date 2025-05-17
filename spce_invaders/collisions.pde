@@ -1,4 +1,4 @@
-
+//this tab controlls the colisions that allow the game to have a game over
 void checkCollisions() {
   for (int i = gameObjects.size() - 1; i >= 0; i--) {
     GameObject a = gameObjects.get(i);

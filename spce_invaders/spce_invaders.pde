@@ -3,14 +3,14 @@ ArrayList<Event> eventQueue = new ArrayList<Event>();
 Ship player;
 int score = 0;
 boolean gameOver = false;
-
+// this allows the classes to be played 
 
 void setup() {
   size(600, 800);
   player = new Ship();
   gameObjects.add(player);
 }
-
+//this allows the 
 void draw() {
   background(0);  // Black background
 
@@ -18,7 +18,7 @@ void draw() {
     // Update logic
     for (GameObject obj : gameObjects) obj.update();
 
-    checkCollisions();  // Handle any hits
+    checkCollisions();  // this basically checks if the player colides with anything
 
     // Draw all objects
     for (GameObject obj : gameObjects) obj.draw();
@@ -26,12 +26,12 @@ void draw() {
     // Process delayed events
     processEvents();
 
-    // Spawn an enemy every second
+    //  this allows the enemies to spawn in
     if (frameCount % 60 == 0) {
       gameObjects.add(new Enemy());
     }
 
-    // Display Score + Health
+    // this shows the Display Score + Health
     fill(255);
     textSize(18);
     text("Score: " + score, 10, 20);
